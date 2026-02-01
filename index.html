@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>StudentHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+<!-- 🌌 BACKGROUND -->
+<div class="animated-bg">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="dark-overlay"></div>
+<canvas id="particles"></canvas>
+
+<!-- 🔝 NAVBAR -->
+<nav class="top-nav">
+  <h2 class="logo">StudentHub</h2>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- 🚀 HERO SECTION -->
+<section class="hero reveal" id="home">
+  <h1>StudentHub</h1>
+  <p class="tagline">Learn. Build. Showcase. Collaborate.</p>
+  <p class="desc">
+    A student-first innovation platform to learn skills, build real projects,
+    collaborate across colleges, and gain portfolio-ready experience — for free.
+  </p>
+
+  <div class="hero-actions">
+    <button class="primary-btn">Join Early Access</button>
+    <button class="ghost-btn">Explore Projects</button>
+  </div>
+</section>
+
+<!-- 📊 SURVEY HIGHLIGHT -->
+<section class="survey-highlight reveal">
+  <div class="survey-card glow">
+    <div class="survey-badge">🚀 Help Shape StudentHub</div>
+
+    <h2>Your Opinion Matters</h2>
+    <p>
+      We’re building <b>StudentHub for students like you</b>.<br />
+      Take just 2 minutes to help us improve features,
+      resources, and real-world projects.
+    </p>
+
+    <div class="survey-actions">
+      <a
+        href="https://forms.gle/AWAa4b1Pzw6XEuhcA"
+        target="_blank"
+        class="primary-btn survey-btn"
+      >
+        📝 Take the Survey
+      </a>
+    </div>
+
+    <p class="survey-note">
+      ⏱ Less than 2 minutes • 💯 Anonymous • ❤️ Student-driven
+    </p>
+  </div>
+</section>
+
+<!-- 🔥 FEATURES -->
+<section class="section grid-4 reveal">
+  <div class="card glow">
+    🚀
+    <h3>Project Showcase</h3>
+    <p>Show real work, not certificates.</p>
+  </div>
+
+  <div class="card glow">
+    📚
+    <h3>Free Resources</h3>
+    <p>Curated roadmaps & tools.</p>
+  </div>
+
+  <div class="card glow">
+    🤝
+    <h3>Collaboration</h3>
+    <p>Build with students worldwide.</p>
+  </div>
+
+  <div class="card glow">
+    💼
+    <h3>Internships</h3>
+    <p>Paid & real project experience.</p>
+  </div>
+</section>
+
+<!-- 🤖 CHATBOT -->
+<div class="chatbot">
+  <button id="chatToggle">💬</button>
+
+  <div class="chat-window">
+    <div class="chat-header">StudentHub Bot</div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="bot-msg">
+        👋 Hi! I’m StudentHub Bot.<br>
+        Ask me about <b>vision</b>, <b>mission</b>, or say <b>go to projects</b>.
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ask something..." />
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<!-- 👣 FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>StudentHub</h2>
+      <p>
+        Built by students, for students.<br />
+        Learn, build, and showcase real work.
+      </p>
+
+      <div class="social-icons">
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Platform -->
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+      <a href="#">Internships</a>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="contact.html">Contact</a>
+      <a href="#">FAQs</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 StudentHub • Built by studenthub
+  </div>
+</footer>
+
+<!-- MAIN JS -->
+<script src="./script.js"></script>
+</body>
+</html>

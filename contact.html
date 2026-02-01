@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Student Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <!-- FONT AWESOME (REQUIRED FOR ICONS) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+<!-- 🌌 Background -->
+<div class="animated-bg">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="dark-overlay"></div>
+<canvas id="particles"></canvas>
+
+<!-- 🔝 Navigation -->
+<nav class="top-nav">
+  <h2 class="logo">Student Hub</h2>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- 📞 Page Header -->
+<section class="hero page-hero reveal">
+  <h1>Contact Us</h1>
+  <p class="desc">
+    Have a question, suggestion, or collaboration idea?  
+    We’d love to hear from you.
+  </p>
+</section>
+
+<!-- ✉️ Contact Section -->
+<section class="section reveal">
+  <div class="contact-wrapper">
+
+    <!-- Left Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>
+        Student Hub is a student-driven platform focused on
+        real skills, real projects, and real impact.
+      </p>
+
+      <ul class="contact-list">
+        <li>📧 Email: studenthub.community@gmail.com</li>
+        <li>🌍 Open for global collaboration</li>
+        <li>🚀 Built by students</li>
+      </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form glow" onsubmit="return false;">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      />
+
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        rows="5"
+        required
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- 👣 FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>Student Hub</h2>
+      <p>
+        Learn by building.<br />
+        Projects that matter.
+      </p>
+
+      <div class="social-icons">
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="contact.html">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Student Hub • Built by studenthub
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
