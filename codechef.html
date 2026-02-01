@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini CodeChef</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- COMBINED CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌌 BACKGROUND -->
+<div class="animated-bg">
+  <span></span><span></span><span></span><span></span>
+</div>
+<div class="dark-overlay"></div>
+<canvas id="particles"></canvas>
+
+<!-- 🔝 NAVBAR -->
+<nav class="top-nav">
+  <h2 class="logo">Mini CodeChef</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contests.html">Contests</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- 🚀 HERO -->
+<section class="hero reveal">
+  <h1>🍽 Mini CodeChef</h1>
+  <p class="tagline">Daily Coding Practice</p>
+  <p class="desc">Solve daily coding problems, practice your skills, and improve your competitive programming.</p>
+</section>
+
+<!-- MAIN CONTAINER -->
+<main class="container reveal">
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <h2>Sum of Two Numbers</h2>
+    <p>Given two integers A and B, print their sum.</p>
+
+    <h4>Input</h4>
+    <pre>2 3</pre>
+
+    <h4>Output</h4>
+    <pre>5</pre>
+  </section>
+
+  <!-- EDITOR -->
+  <section class="editor">
+    <div class="editor-header">
+      <select id="language">
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+      </select>
+      <span>⏱ 00:00</span>
+    </div>
+
+    <textarea id="code-editor" placeholder="// Write your code here..."></textarea>
+
+    <div class="buttons">
+      <button id="run">▶ Run Code</button>
+      <button id="reset">♻ Reset</button>
+    </div>
+
+    <div class="io">
+      <div>
+        <h4>Input</h4>
+        <textarea placeholder="2 3" disabled></textarea>
+      </div>
+
+      <div>
+        <h4>Output</h4>
+        <pre id="output"></pre>
+      </div>
+    </div>
+
+    <div id="result"></div>
+  </section>
+
+</main>
+
+<!-- 👣 FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>Mini CodeChef</h2>
+      <p>Practice, learn, and compete in coding contests to improve your skills.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/studentt_.hub?utm_source=qr&igsh=N2t4a2s4cXJoaG5k" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/student-hubb/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://chat.whatsapp.com/BUBCqP9S5ZB1P69BhMWW7K" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Platform</h4>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contests.html">Contests</a>
+      <a href="#">Resources</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="contact.html">Contact</a>
+      <a href="#">FAQs</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Mini CodeChef • Built by Mini CodeChef
+  </div>
+</footer>
+
+<!-- MAIN JS -->
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coding Contests | Mini CodeChef</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="top-nav">
+  <div class="logo">Mini CodeChef</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contests.html" class="active">Contests</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</div>
+
+<!-- BACKGROUND -->
+<div class="animated-bg">
+  <span></span><span></span><span></span><span></span>
+</div>
+<div class="dark-overlay"></div>
+<canvas id="particles"></canvas>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>🏆 Coding Contests</h1>
+  <p class="tagline">Compete. Learn. Win!</p>
+  <p class="desc">Discover upcoming coding contests from various platforms and sharpen your competitive programming skills.</p>
+</section>
+
+<!-- CONTESTS LIST -->
+<section class="section reveal">
+  <h2 style="text-align:center; color:#38bdf8; margin-bottom:40px;">Upcoming Contests</h2>
+  <div class="grid-3" id="contestGrid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Mini CodeChef</h2>
+      <p>Practice, learn, and compete in coding contests to improve your skills.</p>
+      <div class="social-icons">
+        <a href="#" target="_blank">🌐</a>
+        <a href="#" target="_blank">🐦</a>
+        <a href="#" target="_blank">📸</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Mini CodeChef | All rights reserved</div>
+</footer>
+
+<script>
+  // Sample contests data
+  const contests = [
+    { name: "CodeChef February Challenge", platform: "CodeChef", date: "2026-02-10", duration: "10 days" },
+    { name: "LeetCode Weekly Contest 350", platform: "LeetCode", date: "2026-02-12", duration: "1.5 hours" },
+    { name: "HackerRank 101 Contest", platform: "HackerRank", date: "2026-02-15", duration: "2 hours" },
+    { name: "Google Kickstart Round A", platform: "Kickstart", date: "2026-02-20", duration: "3 hours" }
+  ];
+
+  const grid = document.getElementById("contestGrid");
+
+  contests.forEach(contest => {
+    const card = document.createElement("div");
+    card.className = "card reveal";
+
+    // Map contest platform to HTML page
+    let pageLink = "#"; 
+    if (contest.platform === "CodeChef") pageLink = "codechef.html";
+    else if (contest.platform === "LeetCode") pageLink = "leetcode.html";
+    else if (contest.platform === "HackerRank") pageLink = "hackerrank.html";
+    else if (contest.platform === "Kickstart") pageLink = "kickstart.html";
+
+    card.innerHTML = `
+      <h3 style="color:#38bdf8;">${contest.name}</h3>
+      <p>Platform: <strong>${contest.platform}</strong></p>
+      <p>Date: <strong>${contest.date}</strong></p>
+      <p>Duration: <strong>${contest.duration}</strong></p>
+      <a href="${pageLink}" target="_blank" class="primary-btn" style="margin-top:15px; display:inline-block;">Join Contest</a>
+    `;
+    grid.appendChild(card);
+  });
+
+  // Intersection observer for reveal animation
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("active"));
+  }, { threshold: 0.15 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
