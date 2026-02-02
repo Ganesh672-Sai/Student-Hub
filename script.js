@@ -30,14 +30,16 @@ if (canvas) {
   animate();
 }
 
-/* ================= REVEAL ================= */
+/* ================= REVEAL ON SCROLL ================= */
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => e.isIntersecting && e.target.classList.add("active"));
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("active");
+  });
 }, { threshold: 0.15 });
 reveals.forEach(el => observer.observe(el));
 
-/* ================= CODECHEF COMPILER ================= */
+/* ================= MINI CODECHEF STRICT JUDGE ================= */
 const expectedOutput = "5";
 
 const editor = document.getElementById("code-editor");
@@ -47,8 +49,14 @@ const outputBox = document.getElementById("output");
 const resultBox = document.getElementById("result");
 const languageSelect = document.getElementById("language");
 
-function hasAdditionLogic(code) {
-  return code.includes("+");
+function isBalanced(code, open, close) {
+  let count = 0;
+  for (let c of code) {
+    if (c === open) count++;
+    if (c === close) count--;
+    if (count < 0) return false;
+  }
+  return count === 0;
 }
 
 if (runBtn) {
@@ -67,35 +75,51 @@ if (runBtn) {
 
     let valid = false;
 
+    /* ---- C ---- */
     if (lang === "c") {
       valid =
         code.includes("#include") &&
         code.includes("int main") &&
         code.includes("printf") &&
-        hasAdditionLogic(code);
+        code.includes("+") &&
+        isBalanced(code, "{", "}") &&
+        isBalanced(code, "(", ")");
     }
+
+    /* ---- C++ ---- */
     else if (lang === "cpp") {
       valid =
         code.includes("#include") &&
         code.includes("int main") &&
         (code.includes("cout") || code.includes("printf")) &&
-        hasAdditionLogic(code);
+        code.includes("+") &&
+        isBalanced(code, "{", "}") &&
+        isBalanced(code, "(", ")");
     }
+
+    /* ---- JAVA ---- */
     else if (lang === "java") {
       valid =
         code.includes("class") &&
         code.includes("public static void main") &&
-        (code.includes("System.out.print") || code.includes("System.out.println")) &&
-        hasAdditionLogic(code);
+        code.includes("System.out") &&
+        code.includes("+") &&
+        isBalanced(code, "{", "}") &&
+        isBalanced(code, "(", ")");
     }
+
+    /* ---- PYTHON ---- */
     else if (lang === "python") {
       valid =
         code.includes("print") &&
-        hasAdditionLogic(code);
+        code.includes("+") &&
+        isBalanced(code, "(", ")") &&
+        !code.includes("#include") &&
+        !code.includes("int main");
     }
 
     if (!valid) {
-      resultBox.innerText = "❌ Language or Logic Error";
+      resultBox.innerText = "❌ Compilation Error";
       resultBox.className = "wrong";
       return;
     }
@@ -113,15 +137,6 @@ if (resetBtn) {
     resultBox.innerText = "";
   });
 }
-
-/* ================= SURVEY HIGHLIGHT ================= */
-document.addEventListener("DOMContentLoaded", () => {
-  const survey = document.querySelector(".survey-highlight");
-  if (survey && !localStorage.getItem("surveySeen")) {
-    survey.classList.add("show");
-    localStorage.setItem("surveySeen", "true");
-  }
-});
 
 /* ================= CHATBOT ================= */
 document.addEventListener("DOMContentLoaded", () => {
