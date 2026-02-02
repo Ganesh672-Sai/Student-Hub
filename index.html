@@ -225,5 +225,29 @@
 
 <!-- MAIN JS -->
 <script src="./script.js"></script>
+<!-- ================= CHATBOT ================= -->
+<div class="chatbot-toggle" id="chatbotToggle">💬</div>
+
+<div class="chatbot-box" id="chatbotBox">
+  <div class="chatbot-header">
+    <span>StudentHub Assistant 🤖</span>
+    <button id="closeChatbot">✖</button>
+  </div>
+
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="bot-msg">
+      Hi 👋 I’m the StudentHub Assistant.<br>
+      How can I help you today?
+    </div>
+  </div>
+
+  <div class="chatbot-options">
+    <button onclick="botReply('projects')">📂 Projects</button>
+    <button onclick="botReply('resources')">📘 Resources</button>
+  <button onclick="botReply('contest')">🏆 Contest</button>
+    <button onclick="botReply('contact')">📩 Contact</button>
+  </div>
+</div>
+
 </body>
 </html>
