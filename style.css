@@ -578,4 +578,156 @@ pre {
     text-align: left;
   }
 }
+/* ================= GLOBAL RESPONSIVE FIX ================= */
+html {
+  font-size: 16px;
+}
 
+@media (max-width: 1024px) {
+  .section {
+    padding: 70px 6%;
+  }
+
+  .hero {
+    padding: 160px 6% 100px;
+  }
+}
+
+/* ================= MOBILE NAVBAR ================= */
+@media (max-width: 900px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .top-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .top-nav a {
+    font-size: 13px;
+  }
+}
+
+/* ================= HERO RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .ghost-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ================= GRID FIX ================= */
+@media (max-width: 768px) {
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= RECRUITMENT RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .recruitment-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .recruitment-poster img {
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .recruitment-content h2 {
+    font-size: 28px;
+  }
+
+  .recruitment-content p,
+  .highlight-text {
+    font-size: 14px;
+  }
+}
+
+/* ================= MINI CODECHEF FIX ================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .problem,
+  .editor {
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 140px;
+    font-size: 14px;
+  }
+
+  .editor-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .io {
+    flex-direction: column;
+  }
+}
+
+/* ================= FOOTER FIX ================= */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-brand h2 {
+    font-size: 22px;
+  }
+}
+
+/* ================= SMALL DEVICES ================= */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .recruitment-content h2 {
+    font-size: 24px;
+  }
+
+  .survey-card h2 {
+    font-size: 22px;
+  }
+
+  .survey-card {
+    padding: 30px 22px;
+  }
+}
