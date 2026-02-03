@@ -834,3 +834,29 @@ html {
     right: 5%;
   }
 }
+/* ================= QR CODE ================= */
+.hero-qr {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.qr-text {
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #cbd5f5;
+  opacity: 0.9;
+}
+
+.qr-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.qr-image:hover {
+  transform: scale(1.05);
+}
