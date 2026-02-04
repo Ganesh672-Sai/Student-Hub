@@ -1,145 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coding Contests | Mini CodeChef</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Contact | StudentHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
 
-<!-- NAVBAR -->
-<div class="top-nav">
-  <div class="logo">Mini CodeChef</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="contests.html" class="active">Contests</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</div>
+<body>
 
 <!-- BACKGROUND -->
 <div class="animated-bg">
   <span></span><span></span><span></span><span></span>
 </div>
 <div class="dark-overlay"></div>
-<canvas id="particles"></canvas>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <h1>🏆 Coding Contests</h1>
-  <p class="tagline">Compete. Learn. Win!</p>
-  <p class="desc">Discover upcoming coding contests from various platforms and sharpen your competitive programming skills.</p>
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <div class="logo">StudentHub</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a class="active" href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero page-hero">
+  <h1>Contact Us</h1>
+  <p class="desc">
+    Have questions or feedback?  
+    Send us a message and we’ll get back to you.
+  </p>
 </section>
 
-<!-- CONTESTS LIST -->
-<section class="section reveal">
-  <h2 style="text-align:center; color:#38bdf8; margin-bottom:40px;">Upcoming Contests</h2>
-  <div class="grid-3" id="contestGrid"></div>
+<!-- CONTACT FORM -->
+<section class="section">
+  <div class="card glow" style="max-width:700px;margin:auto;">
+
+    <h2 style="text-align:center;margin-bottom:25px;">
+      📩 Get in Touch
+    </h2>
+
+    <form id="contactForm">
+
+      <input
+        type="text"
+        placeholder="Your Name"
+        required
+        style="width:100%;margin-bottom:16px;"
+      />
+
+      <input
+        type="email"
+        placeholder="Your Email"
+        required
+        style="width:100%;margin-bottom:16px;"
+      />
+
+      <textarea
+        placeholder="Your Message"
+        rows="5"
+        required
+        style="width:100%;margin-bottom:22px;"
+      ></textarea>
+
+      <button type="submit" class="primary-btn" style="width:100%;">
+        Submit Message
+      </button>
+
+      <p id="successMsg"
+         style="display:none;margin-top:18px;text-align:center;color:#22c55e;">
+        ✅ Thank you! Your message has been submitted.
+      </p>
+
+    </form>
+
+  </div>
 </section>
 
-<!-- 👣 FOOTER -->
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-container">
 
-    <!-- Brand -->
     <div class="footer-brand">
       <h2>StudentHub</h2>
       <p>
-        Built by students, for students.<br />
-        Learn, build, and showcase real work.
+        A student-focused platform for projects, learning,
+        collaboration, and career growth.
       </p>
-
-      <div class="social-icons">
-        <a href="https://www.instagram.com/studentt_.hub?utm_source=qr&igsh=N2t4a2s4cXJoaG5k"
-           target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="#" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/company/student-hubb/"
-           target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <a href="#" title="Discord">
-          <i class="fab fa-discord"></i>
-        </a>
-
-        <a href="https://chat.whatsapp.com/BUBCqP9S5ZB1P69BhMWW7K"
-           target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
     </div>
 
-    <!-- Platform -->
-    <div class="footer-links">
-      <h4>Platform</h4>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="resources.html">Resources</a>
-      <a href="#">Internships</a>
-    </div>
-
-    <!-- Support -->
     <div class="footer-links">
       <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <a href="#">Contact</a>
       <a href="#">FAQs</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms & Conditions</a>
     </div>
 
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <a href="#">+91 9912262559</a>
+      <a href="#">studenthub.offical@gmail.com</a>
+    </div>
+
   </div>
 
   <div class="footer-bottom">
-    © 2026 StudentHub • Built by StudentHub
+    © 2026 StudentHub. All rights reserved.
   </div>
 </footer>
 
+<!-- FORM SCRIPT -->
 <script>
-  // Sample contests data
-  const contests = [
-    { name: "CodeChef February Challenge", platform: "CodeChef", date: "2026-02-10", duration: "10 days" },
-    { name: "LeetCode Weekly Contest 350", platform: "LeetCode", date: "2026-02-12", duration: "1.5 hours" },
-    { name: "HackerRank 101 Contest", platform: "HackerRank", date: "2026-02-15", duration: "2 hours" },
-    { name: "Google Kickstart Round A", platform: "Kickstart", date: "2026-02-20", duration: "3 hours" }
-  ];
+  const form = document.getElementById("contactForm");
+  const msg = document.getElementById("successMsg");
 
-  const grid = document.getElementById("contestGrid");
-
-  contests.forEach(contest => {
-    const card = document.createElement("div");
-    card.className = "card reveal";
-
-    // Map contest platform to HTML page
-    let pageLink = "#"; 
-    if (contest.platform === "CodeChef") pageLink = "codechef.html";
-    else if (contest.platform === "LeetCode") pageLink = "leetcode.html";
-    else if (contest.platform === "HackerRank") pageLink = "hackerrank.html";
-    else if (contest.platform === "Kickstart") pageLink = "kickstart.html";
-
-    card.innerHTML = `
-      <h3 style="color:#38bdf8;">${contest.name}</h3>
-      <p>Platform: <strong>${contest.platform}</strong></p>
-      <p>Date: <strong>${contest.date}</strong></p>
-      <p>Duration: <strong>${contest.duration}</strong></p>
-      <a href="${pageLink}" target="_blank" class="primary-btn" style="margin-top:15px; display:inline-block;">Join Contest</a>
-    `;
-    grid.appendChild(card);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.style.display = "block";
+    form.reset();
   });
-
-  // Intersection observer for reveal animation
-  const reveals = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("active"));
-  }, { threshold: 0.15 });
-  reveals.forEach(el => observer.observe(el));
 </script>
 
 </body>
