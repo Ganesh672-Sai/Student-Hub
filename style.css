@@ -860,3 +860,59 @@ html {
 .qr-image:hover {
   transform: scale(1.05);
 }
+/* ================= FAQ ACCORDION ================= */
+.faq-section {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 20px 40px rgba(56,189,248,0.2);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  font-size: 15px;
+  color: #cbd5f5;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 20px;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
